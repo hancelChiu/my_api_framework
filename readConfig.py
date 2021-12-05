@@ -27,9 +27,13 @@ class ReadConfig():
 
 	def get_base_url(self):
 		protocol = self.cf.get("HTTP", "protocol")
-		ip = self.cf.get("HTTP", "host")
+
+    host = self.cf.get("HTTP", "host")
 		port = self.cf.get("HTTP", "port")
-		base_url = protocol + '://' + ip + ':' + port
+
+
+base_url = protocol + '://' + host + ':' + port
+# base_url = protocol + '://' + host
 		return base_url
 
 
