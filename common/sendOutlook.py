@@ -74,8 +74,8 @@ class send_email():
             smtp = smtplib.SMTP()  # 注意：如果遇到发送失败的情况（提示远程主机拒接连接），这里要使用SMTP_SSL方法
             smtp.connect(host, port)
             # 登录
-            smtp.ehlo()  # 用户认证
-            smtp.starttls()  # 明文通信协议的扩展，能够让明文的通信连线直接成为加密连线（使用SSL或TLS加密），而不需要使用另一个特别的端口来进行加密通信，属于机会性加密
+            smtp.ehlo()  # 向邮箱发送SMTP 'ehlo' 命令
+            smtp.starttls()
             smtp.login(user, password)
             smtp.sendmail(sender, receiver, message.as_string())
             print("邮件发送成功！！！")

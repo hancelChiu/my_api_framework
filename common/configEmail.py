@@ -32,6 +32,8 @@ date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 subject = title + "" + date
 value = localReadConfig.get_email('receiver')
 receiver = []
+print(subject)
+print(content)
 #get receiver list
 for n in str(value).split(","):
 	receiver.append(n)
@@ -61,9 +63,6 @@ class send_email():
 			smtp.quit()
 		except Exception as e:
 			log.error(str(e))
-
-
-
 
 
 if __name__ == '__main__':
