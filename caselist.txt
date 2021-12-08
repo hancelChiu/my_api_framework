@@ -1,4 +1,1 @@
 #testCase/test01case
-testCase/testChineseHistoryTop100
-testCase/testDefaultPeriod
-testCase/testChineseHistoryNodeDetail
